@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Admin page</title>
+
+</head>
+<body>
+
+
+<div class="container">
+    <center>
+        <div class="admin">
+            <h2 class="admin-screen-title">Yahallo! Users</h2>
+        </div>
+        <div class="sort">
+            <a href="/admin/name">Name</a>
+            <a href="/admin/email">Email</a>
+            <a href="/admin/password">Password</a>
+            <a href="/admin/country">Country</a>
+        </div>
+        <h3>Sort by <%= sort.by %></h3>
+    </center>
+    <table class="table">
+        <% for(var i=0; i < data.length; i++) { %>
+            <tr class="line">
+                <form action="/admin" method="post">
+                    <td><%= i + 1 %></td>
+                    <td style="display: none"><input type="text" name="id" value="<%= data[i]._id %>"></td>
+                    <td><input type="text" name="name" value="<%= data[i].name%>"</td>
+                    <td><input type="text" name="email" value="<%= data[i].email%>"</td>
+                    <td><input type="text" name="password" value="<%= data[i].password%>"</td>
+                    <td><input type="text" name="country" value="<%= data[i].country%>"</td>
+                    <td><input type="submit" value="Change" class="change"></td></form>
+                <td><form action="/delete" method="post"><input type="text" name="index" value="<%= data[i]._id %>" style="display: none;"><input type="submit" value="Delete" class="delete"></form></td>
+            </tr>
+        <% } %>
+        <tr class="line">
+            <form action="/create" method="post">
+                <td>#</td>
+                <td><input type="text" name="create_name" placeholder="Name"></td>
+                <td><input type="text" name="create_email" placeholder="Email"></td>
+                <td><input type="text" name="create_password" placeholder="Password"></td>
+                <td><input type="text" name="create_country" placeholder="Country"></td>
+                <td style="border-right: 0"><input type="submit" value="Create" class="change"></td>
+                <td style="border-left: 0"></td>
+            </form>
+        </tr>
+        <tr class="last" style="display: none;"></tr>
+    </table>
+    <!--<center><button id="add">+ add new user</button></center>-->
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+
+    const btn = document.getElementById('add');
+
+    function addUser(){
+        console.log('click');
+        $('.last').replaceWith(
+            `<tr class="line">
+               <form action="/create" method="post">
+                    <td>#</td>
+                    <td><input type="text" name="create_name" placeholder="Name"></td>
+                    <td><input type="text" name="create_email" placeholder="Email"></td>
+                    <td><input type="text" name="create_password" placeholder="Password"></td>
+                    <td><input type="text" name="create_country" placeholder="Country"></td>
+                    <td><input type="submit" value="Create a user" class="change"></td>
+                    <td></td>
+               </form>
+          </tr>`
+        );
+    };
+
+    btn.addEventListener('click', function(){
+        addUser();
+    });
+</script>
+</body>
+</html>

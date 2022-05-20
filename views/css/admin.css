@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    background-image: url(/assets/img/bg-admin2.jpg);
+    background-size: cover;
+}
+
+.admin-screen-title{
+    font-family: 'Segoe Script';
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: -5px 0 #EA1E63, 0 2px #EA1E63, 2px 0 #EA1E63, 0 2px #EA1E63;
+    margin: -10px auto;
+}
+table{
+    margin: 0 auto ;
+    /*border-collapse: collapse;*/
+    border-radius: 80%;
+
+}
+
+td{
+    background-color: inherit;
+    color: white;
+    text-shadow: -2px 0 #EA1E63, 0 2px #EA1E63, 2px 0 #EA1E63, 0 2px #EA1E63;
+    border: 3px solid white;
+    padding: 10px;
+}
+
+.sort{
+    width: 600px;
+    color: white;
+    text-shadow: -5px 0 #EA1E63, 0 2px #EA1E63, 2px 0 #EA1E63, 0 2px #EA1E63;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    font-family: 'Segoe Script';
+}
+
+.sort a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.sort a:hover{
+    color: #fff;
+}
+
+#add{
+    margin-top: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    background-color: white;
+    color: #EA1E63;
+    width: 800px;
+    transition: 0.3s ease;
+}
+
+#add:hover{
+    background-color: inherit;
+}
+
+.change{
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    background-color: #EA1E63;
+    color: white;
+    border: 2px solid #EA1E63;
+    transition: 0.3s ease;
+    padding: 5px 10px;
+}
+
+.change:hover{
+    cursor: pointer;
+    color: #EA1E63;
+    background-color: #fff;
+}
+
+.delete{
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    background-color: #FFA02E;
+    color: #fff;
+    border: 2px solid #7C32C6;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+}
+.delete:hover{
+    cursor: pointer;
+    color: #FFA02E;
+    background-color: #7C32C6;
+}
+
+form{
+    font-family: 'Roboto Slab', serif;
+}
+
+input {
+    font-family: 'Roboto Slab', serif;
+    border-radius: 5px;
+    border: 0;
+    padding: 4px;
+    color: #FFA02E;
+    text-shadow: 1px 0 #7C32C6, 0 1px #7C32C6, 1px 0 #7C32C6, 0 1px #7C32C6;
+}
+.admin{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.admin img{
+    margin-left: 20px;
+    width: 60px;
+}
+
+h3{
+    color: white;
+    text-shadow: -5px 0 #EA1E63, 0 2px #EA1E63, 2px 0 #EA1E63, 0 2px #EA1E63;
+}

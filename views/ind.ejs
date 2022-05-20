@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Yahallo! - SHOP</title>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+        var map;
+
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [51.091981546000504, 71.40526534941131],
+                zoom: 16
+            });
+
+            DG.marker([51.091981546000504, 71.40526534941131]).addTo(map).bindPopup('Yahallo!');
+        });
+    </script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <a class="logo" href="">
+            <img class="logo-img" src="/assets/img/logoo.png" alt="">
+        </a>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#start-screen" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#location" class="nav-link">Location</a></li>
+                <li class="nav-item"><a href="/login" class="nav-link">Sign in</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="conrainer100">
+
+        <section class="start-screen" id="start-screen">
+            <h1 class="start-screen-title">Yahallo!</h1>
+        </section>
+    </div>
+    <div class="container">
+        <section class="about" id="about">
+            <h2 class="section-title">Yahallo! - anime figurines store</h2>
+
+            <div class="about-content">
+                <div class="slider">
+                    <img src="/assets/img/main-st-1.jpg" alt="">
+                </div>
+                <div class="about-text">
+                    <p class="par1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officiis dolores
+                        sunt commodi illo, quia in itaque illum iste ducimus quo quibusdam consequatur ipsum totam,
+                        placeat dignissimos tempora ex est?</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="conrainer100">
+        <section class="location" id="location">
+            <h2 class="section-title">Come to us</h2>
+            <div class="location-block">
+                <h3>
+                    Address: avenue. Lonely Kittens 60
+                </h3>
+                <div id="map" style="width:700px; height:400px"></div>
+            </div>
+        </section>
+    </div>
+</main>
+
+</footer>
+<footer class="footer">
+    <div class="container">
+
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>

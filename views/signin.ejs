@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+
+    <link rel="stylesheet" href="/css/stylerg.css">
+</head>
+<body>
+
+
+<main class="main">
+    <div class="container">
+        <form action="/login" method="post">
+
+            <div class="form-block">
+                <h1 class="form-title">Yahallo! login</h1>
+            </div>
+
+            <hr style="font-weight: bold; color: black; margin-top: 10px;">
+
+            <div class="form-block fb">
+                <label class="label">EMAIL</label>
+                <div class="input-block">
+                    <input  id="email" class ="form-control"  type="email" name="email">
+                </div>
+            </div>
+
+            <div class="form-block fb">
+                <label class="label">PASSWORD</label>
+                <div class="input-block">
+                    <input id="password" class="form-control" type="password" name="password">
+                </div>
+            </div>
+
+            <div class="form-block fb">
+                <div class="center">
+                    <input type="submit" class="btn" value="Login">
+                </div>
+            </div>
+
+            <br>
+            <p>Already have an account? <a href="/register">sign up</a></p>
+        </form>
+</main>
+</body>
+
+<script>
+    $(document).ready ( function(){
+        const name = localStorage.getItem('name');
+        const country = localStorage.getItem('country');
+        const email = localStorage.getItem('email');
+        const lastSession = new Date(localStorage.time);
+        var now = new Date();
+
+        localStorage.removeItem('joining');
+
+        var seconds = (now - lastSession)/1000;
+
+        localStorage.time = now;
+
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("country").innerHTML = country;
+        document.getElementById("email").innerHTML = email;
+        document.getElementById("time").innerHTML = String(seconds);
+    });
+</script>
+</html>

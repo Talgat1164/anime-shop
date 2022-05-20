@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    background: #000;
+    width: 100%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 40px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+}
+
+.logo-img {
+    width: 150px;
+}
+
+.nav {
+
+    width: 40%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-family: 'Tahoma';
+    font-weight: 700;
+    font-size: 25px;
+    color: #BBB;
+}
+
+
+.container100 {
+    height: 100vh;
+}
+
+.start-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/assets/img/bgstartscreen.jpg);
+    background-size: cover;
+}
+
+
+
+.start-screen-title {
+    font-family: 'Segoe Script';
+    font-size: 85px;
+    text-align: center;
+    color: white;
+    text-shadow: -5px 0 #EA1E63, 0 2px #EA1E63, 2px 0 #EA1E63, 0 2px #EA1E63;
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Roboto,sans-serif';
+    font-size: 30px;
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+
+.about-content {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slider {
+    width: 40%;
+}
+
+.about-text {
+    width: 40%;
+}
+
+.par1 {
+    font-size: 25px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-image: url(/assets/img/bg-geo.jpg);
+    color: wheat;
+    text-shadow: -1px 0 #111, 0 2px #111, 2px 0 #111, 0 2px #111;
+
+}
+
+.location-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px 30px;
+    border: 5px solid white;
+}
